@@ -1,0 +1,23 @@
+---
+services:
+  build_app:
+    build: java_webapp
+    volumes:
+      - war_file:/home/App42PaaS-Java-MySQL-Sample/target
+      -
+  run_app:
+    build: run_apps
+    ports:
+      - "8080:8080"
+    volumes:
+      - war_file:/usr/local/tomcat/webapps
+      -
+  dbMysql:
+    image: library/mysql:5.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123123asdzxc
+      MYSQL_DATABASE: mydb
+version: "3.8"
+volumes:
+  war_file:
