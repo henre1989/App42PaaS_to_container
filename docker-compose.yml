@@ -19,6 +19,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123123asdzxc
       MYSQL_DATABASE: mydb
+#    ports:
+#      - "3306:3306"
+#      MYSQL_USER
 
 version: "3.8"
 volumes:
