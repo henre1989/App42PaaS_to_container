@@ -10,7 +10,6 @@ services:
     ports:
       - "8080:8080"
     volumes:
-#      - war_file:/usr/local/tomcat/war
       - war_file:/usr/local/tomcat/webapps
 
   dbMysql:
@@ -18,6 +17,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 123123asdzxc
+      MYSQL_DATABASE: mydb
 
   adminer:
     image: adminer
