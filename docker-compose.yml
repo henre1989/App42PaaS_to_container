@@ -18,10 +18,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 123123asdzxc
-      MYSQL_DATABASE: mydb
-#    ports:
-#      - "3306:3306"
-#      MYSQL_USER
+
+  adminer:
+    image: adminer
+    ports:
+      - "8081:8080"
+    restart: always
 
 version: "3.8"
 volumes:
