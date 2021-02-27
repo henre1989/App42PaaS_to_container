@@ -10,7 +10,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - war_file:/usr/local/tomcat/war
+#      - war_file:/usr/local/tomcat/war
+      - war_file:/usr/local/tomcat/webapps
 
   dbMysql:
     image: library/mysql:5.6
